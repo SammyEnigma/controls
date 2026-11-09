@@ -10,9 +10,10 @@ BaseInput {
 
 	constructor: {
 		var self = this
-		this.element.on("change", function(e) {
+		this.element.on("input", function(e) {
 			self.value = ""
 			self.value = e.target.value
+			e.target.value = ""
 		}.bind(this))
 	}
 }
